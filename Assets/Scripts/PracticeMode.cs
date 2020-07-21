@@ -97,6 +97,7 @@ public class PracticeMode : Progress
     {
         if (gp.getInput == 3)
         {
+            //djkajalkgkla
             Debug.Log("BYE ROLL");
             gp.getInput = 0;
             nextState();

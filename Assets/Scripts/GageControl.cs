@@ -8,6 +8,7 @@ public class GageControl : MonoBehaviour
     public GetPower gp;
     public GameObject gage;
     RectTransform rectTran;
+    
     // Start is called before the first frame update
     void Start()
     {

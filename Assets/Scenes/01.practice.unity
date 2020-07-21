@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 105134889}
   - component: {fileID: 105134890}
   m_Layer: 5
-  m_Name: Slope
+  m_Name: Wide Length
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1004,7 +1004,7 @@ GameObject:
   - component: {fileID: 649826858}
   - component: {fileID: 649826859}
   m_Layer: 5
-  m_Name: Length
+  m_Name: BFSlope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2771,6 +2771,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da0ac7491b9d74240aa3bedc7ab07355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  golfBall: {fileID: 0}
+  camera: {fileID: 0}
+  reBall: {fileID: 0}
+  reCamera: {fileID: 0}
 --- !u!4 &1178472537
 Transform:
   m_ObjectHideFlags: 0
@@ -3922,7 +3926,7 @@ GameObject:
   - component: {fileID: 1875827040}
   - component: {fileID: 1875827041}
   m_Layer: 5
-  m_Name: Wide
+  m_Name: LRSlope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

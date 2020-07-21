@@ -38,13 +38,19 @@ public class GetPower : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        pm.hitCount++;
-        powerCheck = true;
-        if (getInput == 0) getInput = 1;
+        if (pm.state == Progress.StateLevel.Ready)
+        {
+            pm.hitCount++;
+            powerCheck = true;
+            if (getInput == 0) getInput = 1;
+        }
     }
     public void OnPointerUp(PointerEventData eventData)
     {
-        powerCheck = false;
-        if (getInput == 1) getInput = 2;
+        if (pm.state == Progress.StateLevel.Ready)
+        {
+            powerCheck = false;
+            if (getInput == 1) getInput = 2;
+        }
     }
 }

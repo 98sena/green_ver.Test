@@ -1291,7 +1291,17 @@ PrefabInstance:
     - target: {fileID: 1203197145421681114, guid: d86bd43fac0a5864b97d3b722040c078,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01127
+      value: 0.0076
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203197145421681114, guid: d86bd43fac0a5864b97d3b722040c078,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.097
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203197145421681114, guid: d86bd43fac0a5864b97d3b722040c078,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1171
       objectReference: {fileID: 0}
     - target: {fileID: 8405317065323677370, guid: d86bd43fac0a5864b97d3b722040c078,
         type: 3}
@@ -3136,7 +3146,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1357789699}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 792669824}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1357789699
 MonoBehaviour:
   m_ObjectHideFlags: 0

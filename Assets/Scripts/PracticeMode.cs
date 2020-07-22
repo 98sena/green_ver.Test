@@ -68,6 +68,7 @@ public class PracticeMode : Progress
         }
         nextState();
     }
+   
     IEnumerator WaitForNotice()
     {
         yield return new WaitForSeconds(1.0f);
@@ -75,6 +76,7 @@ public class PracticeMode : Progress
     }
     public override void readyState()
     {
+        
         
         if (!readyButtons.activeSelf)
         {
@@ -93,11 +95,20 @@ public class PracticeMode : Progress
             nextState();
         }
     }
+    //각도 조절
+    public void leftbutton()
+    {
+        
+    }
+    private void rightbutton()
+    {
+
+    }
     public override void rollState()
     {
         if (gp.getInput == 3)
         {
-            //djkajalkgkla
+          
             Debug.Log("BYE ROLL");
             gp.getInput = 0;
             nextState();
@@ -112,6 +123,7 @@ public class PracticeMode : Progress
         Debug.Log("END STATE");
         if (bm.succeed)
         {
+            
             endButtons.SetActive(true);
         }
         else

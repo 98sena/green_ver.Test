@@ -42,16 +42,18 @@ public class BollMove : MonoBehaviour
             //Debug.Log(cnt+"       "+Time.deltaTime);
 
             newPos.z = newPos.z + Time.deltaTime * gp.power;
-            //transform.position = newPos;
+            
             gp.power = gp.power - Time.deltaTime * fraction * gp.power;
-
-            //transform.position = Vector3.Lerp(transform.position, new Vector3(23.8f,3.74f,30f), 0.1f * Time.deltaTime);
-            //gp.power--;
 
             transform.position = Vector3.Lerp(transform.position, newPos, 10f*Time.deltaTime);
             newPos = transform.position;
             transform.Rotate(Vector3.right * 2.0f);
+            //transform.position = newPos;
+            //transform.position = Vector3.Lerp(transform.position, new Vector3(23.8f,3.74f,30f), 0.1f * Time.deltaTime);
+            //gp.power--;
             //beforePos = newPos;
+
+
 
         }
     }

@@ -144,6 +144,7 @@ public class PracticeMode : Progress
         if (!selectButtons.activeSelf)
         {
             selectButtons.SetActive(true);
+            selectButtons.GetComponentInChildren<Slider>().value = 0;
         }
         ball.transform.position = startPos.transform.position;
         cameraPos.transform.position = startCameraPos.transform.position;

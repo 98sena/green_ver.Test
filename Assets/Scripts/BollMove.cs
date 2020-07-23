@@ -42,7 +42,9 @@ public class BollMove : MonoBehaviour
             //Debug.Log(cnt+"       "+Time.deltaTime);
 
             //newPos.z = newPos.z + Time.deltaTime * gp.power;
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Time.deltaTime * gp.power);
+            //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Time.deltaTime * gp.power);
+            transform.position += new Vector3(0, 0, Time.deltaTime * gp.power);
+
 
             gp.power = gp.power - Time.deltaTime * fraction * gp.power;
             transform.Rotate(Vector3.right * 2.0f);

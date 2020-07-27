@@ -21,6 +21,5 @@ public class GageControl : MonoBehaviour
     void Update()
     {
         rectTran.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, (float)gp.power);
-        Debug.Log(gp.power);
     }
 }

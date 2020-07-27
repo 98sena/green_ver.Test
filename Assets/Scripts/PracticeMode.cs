@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class PracticeMode : Progress
 {
     public GameObject selectButtons;
+
+    Slider[] selectSliders = new Slider[3];
     public GameObject startButtons;
     public GameObject readyButtons;
     public GetPower gp;
@@ -33,6 +35,12 @@ public class PracticeMode : Progress
     {
         state = 0;
         practiceCount = 0;
+        for(int i = 0; i < selectSliders.Length; i++)
+        {
+            selectSliders[i] = selectButtons.transform.GetChild(i).gameObject.GetComponent<Slider>();
+        }
+        selectSliders[1].value = 0.5f;
+        selectSliders[2].value = 0.5f;
         
     }
 
@@ -46,6 +54,7 @@ public class PracticeMode : Progress
 
     public override void startState()
     {
+        
         if (!startButtons.activeSelf)
         {
             startButtons.SetActive(true);
@@ -76,8 +85,6 @@ public class PracticeMode : Progress
     }
     public override void readyState()
     {
-        
-        
         if (!readyButtons.activeSelf)
         {
             Debug.Log("Hi Start");
@@ -95,15 +102,6 @@ public class PracticeMode : Progress
             nextState();
         }
     }
-    //각도 조절
-    public void leftbutton()
-    {
-        
-    }
-    private void rightbutton()
-    {
-
-    }
     public override void rollState()
     {
         if (gp.getInput == 3)
@@ -115,6 +113,10 @@ public class PracticeMode : Progress
             if (readyButtons.activeSelf)
             {
                 readyButtons.SetActive(false);
+            }
+            if (bm.succeed)
+            {
+                nextState();
             }
         }
     }
@@ -144,7 +146,9 @@ public class PracticeMode : Progress
         if (!selectButtons.activeSelf)
         {
             selectButtons.SetActive(true);
-            selectButtons.GetComponentInChildren<Slider>().value = 0;
+            selectSliders[0].value = 0f;
+            selectSliders[1].value = 0.5f;
+            selectSliders[2].value = 0.5f;
         }
         ball.transform.position = startPos.transform.position;
         cameraPos.transform.position = startCameraPos.transform.position;
